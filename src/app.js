@@ -6,8 +6,6 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function card() {
-  let numbers = Math.floor(Math.random() * 13);
-  let suits = Math.floor(Math.random() * 4);
   let suitsTypes = ["♦", "♥", "♠", "♣"];
   let numbersType = [
     "A",
@@ -24,6 +22,9 @@ window.onload = function card() {
     "Q",
     "K"
   ];
+  let numbers = Math.floor(Math.random() * numbersType.length);
+  let suits = Math.floor(Math.random() * suitsTypes.length);
+
   if (suits === 0 || suits === 1) {
     document.getElementById("card").style.color = "red";
   }
